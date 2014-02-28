@@ -1,0 +1,18 @@
+** Some coding rules **
+
+Freely inspired from BitcoinJ / BitcoinSharp, some of the classes might be direct imports with little modifications;
+However, implementations of algorithms must be much more clean and "bulletproof".
+Basic operations (Sending BTC, being notified of incoming transactions, creation of a new address and reuse of private keys) must be *very* easy to handle.
+
+
+* Bicoin is spelled Bitcoin, not BitCoin, as on http://bitcoin.org/
+
+* *Always* add brackets, on the same line as the operation if single; This prevent mistakes to happen if someone want to add code to your block.
+Incorrect:
+if(condition)
+	doIt();
+Correct:
+if(condition)
+{ doIt(); }
+
+* When relevant, prefer using abstract classes (you put in an "Abstractions" directory, along with Interfaces), that you prefix with an A; It's useful to add methods or logic afterwise
